@@ -1,0 +1,31 @@
+image: trion/ng-cli-karma
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+   - apt-get update -y && apt-get install sshpass -y && apt-get install traceroute -y
+
+deploy_production:
+    stage: deploy
+    environment:
+        name: deply_HALLODEL
+        url: http://www.hallodel.com
+    only:
+        - master
+    script:
+        - export HALLODEL_SERVER_PASS=ShamsaneofmW3@@@
+        - export SSHPASS='ShamsaneofmW3@@@'
+        - BACKUP_DIR_NAME="/home/hallodel/web-backup/backup-$(date +"%Y%m%d-%H%M%S")"
+        - echo $BACKUP_DIR_NAME
+        - echo $JOORJENS_SERVER_PASS
+        - ls
+        - pwd
+        - mkdir .dep-file
+        - cp -rv ./* .dep-file
+        - ls .dep-file/
+        - pwd
+        - sshpass -V
+        - sshpass -e sftp  -oBatchMode=no .dep-file/*  hallodel@hallodel.com:/public_html/
+    retry: 2
