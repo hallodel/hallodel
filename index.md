@@ -432,7 +432,7 @@ Madar Square Mirdamad Blvd <br />  Tehran, Iran</p>
                         <div class="box-icon">
                             <span class="lnr lnr-phone-handset"></span>
                         </div>
-                        <p>+98 9147729484 <br/>+98 9397575762 </p>
+                        <p>+98 9147729484 </p>
                     </div>
 
                 </div>
@@ -442,7 +442,7 @@ Madar Square Mirdamad Blvd <br />  Tehran, Iran</p>
                         <div class="box-icon">
                             <span class="lnr lnr-envelope"></span>
                         </div>
-                        <p>mirzaei.j85@gmail.com <br/> mohammadali.bahramian@gmail.com
+                        <p>mirzaei.j85@gmail.com 
                         </p>
                     </div>
                 </div>
